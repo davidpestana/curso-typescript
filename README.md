@@ -1,245 +1,204 @@
-Perfecto.
-Ahora la estructura queda **clarísima**:
+# 🎓 **TYP-101 — Curso de TypeScript (20 horas)**
+
+## **Temario oficial + planificación horaria**
 
 ---
 
-# ✔️ REGLAS PARA EL DISEÑO DEL CURSO (según lo que acabas de fijar)
+## 📘 **Descripción general**
 
-1. **Todo lo que es “lenguaje TypeScript puro” → se aprende en notebooks.**
-   ✔ Tipos
-   ✔ Interfaces
-   ✔ Clases
-   ✔ Genéricos
-   ✔ Decoradores
-   ✔ Módulos
-   ✔ Funciones
-   ✔ Narrowing
-   ✔ Uniones / Intersecciones
-   ✔ Arrays / Tuplas
-   ✔ Operadores
-   ✔ Todo lo que no requiere build real
-
-2. **Todo lo que es “configuración, build, proyecto real, tsconfig, bundlers, integraciones…” → va SOLO en el Módulo Final.**
-   ✔ tsc real
-   ✔ tsconfig
-   ✔ compilación TS → JS
-   ✔ WebPack / ts-node / Deno CLI
-   ✔ Estructura `src/ dist/`
-   ✔ Módulos reales fuera de notebook
-   ✔ Decoradores con `experimentalDecorators`
-   ✔ Gestión de tipos externos (`@types`)
-   ✔ Archivos `.d.ts`
-   ✔ Integración con proyectos JS externos
-   ✔ Proyecto final pequeño
-
-3. **Los labs se intercalan pero SOLO sobre conceptos del lenguaje**, en notebooks, hasta el módulo final.
-
-4. **El módulo 1 no tiene laboratorio.**
-
-5. **El módulo final (único) sí tiene varios laboratorios integrados, pero fuera de notebook.**
+Este curso ofrece una formación completa y práctica en **TypeScript**, combinando teoría, ejercicios y laboratorios en **notebooks interactivos**, y culminando con un **proyecto real** en un entorno de desarrollo completo.
 
 ---
 
-# 🎓 **TYP-101 — TypeScript (20h)**
+# 🕒 **Planificación horaria (20 horas)**
 
-## **Temario FINAL optimizado para notebooks + módulo final de build**
-
-Aquí está la versión definitiva, limpia, profesional, alinearada con tus requisitos.
+| Módulo | Contenido                                | Duración |
+| ------ | ---------------------------------------- | -------- |
+| **1**  | Introducción a TypeScript                | **1h**   |
+| **2**  | Tipos de datos                           | **2h**   |
+| **3**  | Uniones, Intersecciones, Narrowing       | **1.5h** |
+| **4**  | Interfaces y modelado de objetos         | **2h**   |
+| **5**  | Funciones avanzadas                      | **1.5h** |
+| **6**  | Programación Orientada a Objetos         | **2h**   |
+| **7**  | Herencia y abstracción                   | **2h**   |
+| **8**  | Genéricos                                | **2h**   |
+| **9**  | Decoradores                              | **1h**   |
+| **10** | Módulos e import/export                  | **1h**   |
+| **11** | Archivos de definición (`.d.ts`, @types) | **1h**   |
+| **12** | Configuración, build y proyecto final    | **4h**   |
+|        | **TOTAL**                                | **20h**  |
 
 ---
 
-# 🧱 **MÓDULO 1 — Introducción a TypeScript (1h)**
+# 📚 **Temario completo**
+
+A continuación, el contenido detallado de cada módulo.
+
+---
+
+## 🧱 **MÓDULO 1 — Introducción a TypeScript (1h)**
 
 *(Sin laboratorio)*
 
 ### Contenidos:
 
-* Qué es TS y por qué usarlo
-* TypeScript vs JavaScript
+* Qué es TypeScript y por qué usarlo
 * Tipado estático y gradual
-* Integración con JavaScript
-* Primer contacto con TS (en notebook con Deno)
-* **Conceptos básicos necesarios no listados explícitamente:**
-
-  * variables `let` y `const`
-  * tipos primitivos
-  * primeras funciones
-  * operadores lógicos y aritméticos
-  * uniones simples
-
-### Material:
-
-* `01-teoria.ipynb`
-* `01-ejercicios.ipynb`
+* Diferencias con JavaScript
+* Variables (`let`, `const`)
+* Funciones básicas
+* Tipos primitivos
+* Primer notebook y primer código TS
 
 ---
 
-# 🧱 **MÓDULO 2 — Tipos de datos (2h)**
+## 🧱 **MÓDULO 2 — Tipos de datos (2h)**
 
-*(En notebooks, con lab)*
+*(Notebook + ejercicios + lab)*
 
 ### Contenidos:
 
-* Primitivos avanzados
-* null, undefined, never
-* any, unknown
+* `string`, `number`, `boolean` avanzados
+* `null`, `undefined`, `never`
+* `any` vs `unknown`
 * Alias (`type`)
-* Arrays
+* Arrays tipados
 * Tuplas
 * Enums
 * Literal types
+* Modelado básico de datos
 
-### Material:
+### Lab:
 
-* `02-teoria.ipynb`
-* `02-ejercicios.ipynb`
-* `02-lab.ipynb` (modelado de datos)
+Modelar entidades simples: Usuario, Producto, Ubicación.
 
 ---
 
-# 🧱 **MÓDULO 3 — Uniones, Intersecciones, Narrowing (1.5h)**
+## 🧱 **MÓDULO 3 — Uniones, Intersecciones y Narrowing (1.5h)**
 
-*(En notebooks, con lab)*
+*(Notebook + ejercicios + lab)*
 
 ### Contenidos:
 
-* Uniones
-* Intersecciones
-* Type narrowing
+* Tipos unión
+* Tipos intersección
+* Narrowing con:
 
-  * typeof
-  * instanceof
-  * in
-  * equality narrowing
+  * `typeof`
+  * `instanceof`
+  * `in`
+  * igualdad
 * Discriminated unions
 * Exhaustiveness checking
 
-### Material:
+### Lab:
 
-* `03-teoria.ipynb`
-* `03-ejercicios.ipynb`
-* `03-lab.ipynb`
-  **Lab:** sistema tipado de estados para un ticket.
+Sistema de estados de un ticket (Pending → Assigned → Closed).
 
 ---
 
-# 🧱 **MÓDULO 4 — Interfaces y modelado de objetos (2h)**
+## 🧱 **MÓDULO 4 — Interfaces y modelado de objetos (2h)**
 
-*(En notebooks, con lab)*
+*(Notebook + ejercicios + lab)*
 
 ### Contenidos:
 
-* interface vs type
-* propiedades opcionales
-* readonly
-* index signatures
-* interfaces extendidas
-* contratos de datos (API)
-* interfaces para funciones
+* `interface` vs `type`
+* Propiedades opcionales
+* Propiedades `readonly`
+* Index signatures
+* Interfaces extendidas
+* Interfaces para funciones
+* Contratos de API
 
-### Material:
+### Lab:
 
-* `04-teoria.ipynb`
-* `04-ejercicios.ipynb`
-* `04-lab.ipynb`
-  **Lab:** Modelar usuario + factura + pedido.
+Modelar Usuario + Pedido + Factura con interfaces.
 
 ---
 
-# 🧱 **MÓDULO 5 — Funciones avanzadas (1.5h)**
+## 🧱 **MÓDULO 5 — Funciones avanzadas (1.5h)**
 
-*(En notebooks)*
+*(Notebook + ejercicios + lab)*
 
 ### Contenidos:
 
-* funciones tipadas
-* funciones flecha
-* sobrecargas
-* callbacks tipados
-* manejo de errores tipado
-* call signatures
+* Funciones tipadas
+* Funciones flecha
+* Sobrecargas
+* Callbacks tipados
+* Manejo de errores tipado
+* Call signatures
+* Tipos utilitarios simples
 
-### Material:
+### Lab:
 
-* `05-teoria.ipynb`
-* `05-ejercicios.ipynb`
-* `05-lab.ipynb`
-  **Lab:** utilidades como map/filter/reduce fuertemente tipadas.
+Implementar `map`, `filter` y `reduce` tipados.
 
 ---
 
-# 🧱 **MÓDULO 6 — Programación Orientada a Objetos (2h)**
+## 🧱 **MÓDULO 6 — Programación Orientada a Objetos (2h)**
 
-*(En notebooks)*
+*(Notebook + ejercicios + lab)*
 
 ### Contenidos:
 
 * Clases
 * Constructores
-* Métodos
-* Propiedades
-* Métodos estáticos
+* Métodos y propiedades
 * Getters / setters
+* Static methods
 * Composición vs herencia
+* Private / public / protected
 
-### Material:
+### Lab:
 
-* `06-teoria.ipynb`
-* `06-ejercicios.ipynb`
-* `06-lab.ipynb`
-  **Lab:** clase Producto + Carrito + operaciones tipadas.
+Clase Producto + Carrito (métodos tipados).
 
 ---
 
-# 🧱 **MÓDULO 7 — Herencia y abstracción (2h)**
+## 🧱 **MÓDULO 7 — Herencia y abstracción (2h)**
 
-*(En notebooks)*
+*(Notebook + ejercicios + lab)*
 
 ### Contenidos:
 
-* extends
-* super
-* sobrescritura
-* clases abstractas
-* métodos abstractos
-* polimorfismo
+* `extends` y `super`
+* Sobrescritura de métodos
+* Clases abstractas
+* Métodos abstractos
+* Polimorfismo dinámico
+* Interfaces + clases combinadas
 
-### Material:
+### Lab:
 
-* `07-teoria.ipynb`
-* `07-ejercicios.ipynb`
-* `07-lab.ipynb`
-  **Lab:** Jerarquía Empleado → Jefe → Director.
+Jerarquía `Empleado → Jefe → Director`.
 
 ---
 
-# 🧱 **MÓDULO 8 — Genéricos (2h)**
+## 🧱 **MÓDULO 8 — Genéricos (2h)**
 
-*(En notebooks)*
+*(Notebook + ejercicios + lab)*
 
 ### Contenidos:
 
 * Genéricos en funciones
 * Genéricos en interfaces
 * Genéricos en clases
-* Constraints
-* keyof
-* typeof
-* infer
-* repositorios genéricos
+* Constraints (`extends`)
+* `keyof`, `typeof`
+* `infer`
+* Repositorios genéricos
 
-### Material:
+### Lab:
 
-* `08-teoria.ipynb`
-* `08-ejercicios.ipynb`
-* `08-lab.ipynb`
-  **Lab:** Implementar un `Repository<T>` básico.
+Implementar `Repository<T>`.
 
 ---
 
-# 🧱 **MÓDULO 9 — Decoradores (1h)**
+## 🧱 **MÓDULO 9 — Decoradores (1h)**
 
-*(En notebooks)*
+*(Notebook + ejercicios + lab)*
 
 ### Contenidos:
 
@@ -247,118 +206,93 @@ Aquí está la versión definitiva, limpia, profesional, alinearada con tus requ
 * Decoradores de método
 * Decoradores de propiedad
 * Decoradores con parámetros
-* Casos reales (NestJS, Angular)
+* Explicación del estado actual de decorators (ECMA)
+* Diferencias vs legacy decorators
+* Cuándo usar decoradores en proyectos reales
 
-### Material:
+### Lab:
 
-* `09-teoria.ipynb`
-* `09-ejercicios.ipynb`
-* `09-lab.ipynb`
-  **Lab:** crear @Log(), @Timer(), @Readonly.
+Crear decoradores `@Log()`, `@Timer()`, `@Readonly`.
 
 ---
 
-# 🧱 **MÓDULO 10 — Módulos e import/export (1h)**
+## 🧱 **MÓDULO 10 — Módulos e Import/Export (1h)**
 
-*(En notebooks)*
+*(Notebook + ejercicios + lab)*
 
 ### Contenidos:
 
 * Módulos ES
-* Export default / named
+* `export default` y `export` nombrados
 * Barrel files
-* Estructura recomendada de módulos
-* Intro conceptual a path alias (pero sin build real)
+* Organización de módulos
+* Alias de rutas (conceptual, sin build)
 
-### Material:
+### Lab:
 
-* `10-teoria.ipynb`
-* `10-ejercicios.ipynb`
-* `10-lab.ipynb`
-  **Lab:** reorganizar pequeño conjunto de archivos TS.
+Reorganizar un pequeño conjunto de archivos.
 
 ---
 
-# 🧱 **MÓDULO 11 — Archivos de definición (1h)**
+## 🧱 **MÓDULO 11 — Archivos de definición (1h)**
 
-*(En notebooks)*
+*(Notebook + ejercicios + lab)*
 
 ### Contenidos:
 
-* @types
+* Librerías con tipos (`@types/...`)
 * DefinitelyTyped
-* Tipos de librerías
-* Creación de `.d.ts`
-* Extendiendo tipos de una librería
+* Cómo funcionan los `.d.ts`
+* Crear una definición propia
+* Extender tipos existentes
 
-### Material:
+### Lab:
 
-* `11-teoria.ipynb`
-* `11-ejercicios.ipynb`
-* `11-lab.ipynb`
-  **Lab:** crear una definición `.d.ts` propia.
+Crear un archivo `.d.ts` que describa una utilidad propia.
 
 ---
 
-# 🧱 **MÓDULO 12 — Configuración, build y proyecto final (4h)**
+## 🧱 **MÓDULO 12 — Configuración, build y proyecto final (4h)**
 
-*(Fuera de notebooks, en codespace real)*
-**Este es el único módulo donde se ve configuración, build y webpack.**
+*(Fuera de notebook — entorno real)*
 
 ### Contenidos:
 
-* `tsc`
-* tsconfig completo
-* strict mode
-* noImplicitAny
-* Resolución de módulos
+* `tsc` en CLI
+* `tsconfig.json` completo
+* strict mode y rules importantes
 * Import/export real
-* Compilación TS→JS
-* Archivos `.d.ts` reales
+* Compilación TS → JS
+* Estructura `src/` y `dist/`
 * Webpack + ts-loader
-* Bundle final
-* Scripts npm
+* Scripts NPM
 * Decoradores reales con `experimentalDecorators`
 
 ### Laboratorios:
 
-* Crear proyecto real TS
-* Configurar tsconfig
-* Compilar a JS
-* Bundle con webpack
-* Pequeño proyecto final:
+1. Crear un proyecto real desde cero
+2. Configurar tsconfig (profesional)
+3. Compilar a JS
+4. Bundle con Webpack
+5. Crear **proyecto final** con:
 
-  * Models
-  * Interfaces
-  * POO
-  * Decoradores
-  * Módulos
-  * Build completo
-
----
-
-# 🎯 ¿Qué hemos conseguido?
-
-* ✔ Todo lo que es **dominio del lenguaje** → en notebooks
-* ✔ Todo lo que es **configuración real** → en un único módulo final
-* ✔ Módulo 1 sin lab (coherente)
-* ✔ Módulos 2–11 con teoría + ejercicios + lab
-* ✔ Módulo 12 con proyecto real
-* ✔ Granularidad suficiente para justificar 20h
-* ✔ Totalmente alineado con tu temario oficial
+   * POO
+   * Genéricos
+   * Decoradores
+   * Módulos
+   * Build final
 
 ---
 
-# 👉 ¿Siguiente paso?
+# 🎯 **Resultados de aprendizaje**
 
-Puedo generarte ahora:
+Al terminar, el alumno dominará:
 
-### ✔ El script Bash que crea TODA la estructura
-
-### ✔ La plantilla de notebooks (teoría / ejercicios / lab)
-
-### ✔ El notebook `02-teoria.ipynb` completo y listo
-
-### ✔ Un README general para el curso
-
-Dime qué prefieres.
+* El sistema de tipos de TypeScript
+* Modelado de datos completo
+* POO + herencia + genéricos
+* Decoradores modernos (ECMA)
+* Organización modular profesional
+* Tipado externo y `.d.ts`
+* Configuración real de proyectos TypeScript
+* Build profesional con Webpack
